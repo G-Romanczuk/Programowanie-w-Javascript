@@ -4,53 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<script type="text/javascript">
-   
-   document.querySelectorAll('#form').forEach(x => {
-x.addEventListener('change', () => {calculate()}
-)});
-function calculate() {
-        var list = document.querySelectorAll("#form");
-        var array = [];
-        for(var i = 0; i< list.length; i++)
-        {
-            array[i] = parseInt(list[i].value)
-        }
-        //SUMA
-        var sum = 0
-        list.forEach(x=>sum+= parseInt(x.value));
-        document.getElementById('sum').innerHTML = sum; 
+<script src="main.js"></script>
 
-        //ŚREDNIA
-        var avg = 0
-        var count = 0
-        list.forEach(x=>count++);
-        avg = sum/count;
-        document.getElementById('avg').innerHTML = avg; 
 
-        //MINIMUM
-        var min = Math.min(...array)
-        document.getElementById('min').innerHTML = min; 
-        //MAKSIMUM
-        var max = Math.max(...array)
-        document.getElementById('max').innerHTML = max; 
-}
-
-   
-    
-</script>
-
-<body>
+<body onload="onLoad()">
     <div class="container">
-        <form>
-            <input type="number" id="form" value="1"/></br></br>
-            <input type="number" id="form" value="1"/></br></br>
-            <input type="number" id="form" value="1"/></br></br>
-            <input type="number" id="form" value="1"/></br></br>
+        <form id="formContainer">
+            <input type="number" id="1" class="form" value="1"/>
+            <input type="number" id="2" class="form" value="1"/>
+            <input type="number" id="3" class="form" value="1"/>
         </form>
-        <!-- <button onclick="calculate()">Przelicz</button> -->
+        <button onclick="Add()">Add</button>
+        <button onclick="Delete()">Usuń pole</button>
+        <button onclick="calculate()">Calculate</button>
         </br></br>
         <div id="results">  
         <h2>RESULTS:</h2>

@@ -1,0 +1,17 @@
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    height: max-content;
+}
+
+#formContainer{
+    height: max-content;
+}
+
+.form{
+    display: block;
+    margin: 10px;
+}
