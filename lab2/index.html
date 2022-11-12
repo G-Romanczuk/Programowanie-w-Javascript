@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,6 +38,13 @@
         <!-- Control buttons -->
        <button class="btn btn-next">next</button>
        <button class="btn btn-prev">prev</button>
+
+	   <div class="dots">
+		<button class="dot1" id="dot"></button>
+		<button class="dot2" id="dot"></button>
+		<button class="dot3" id="dot"></button>
+		<button class="dot4" id="dot"></button>
+	   </div>
      </div>
    </body>
 
@@ -91,4 +99,18 @@ prevSlide.addEventListener("click", function () {
   });
 });
     
-    </script>
+ // select dots
+ const dot1 = document.querySelector(".dot1").addEventListener('click', () => {curSlide = 0;  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });})
+ const dot2 = document.querySelector(".dot2").addEventListener('click', () => {curSlide = 1; slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });})
+ const dot3 = document.querySelector(".dot3").addEventListener('click', () => {curSlide = 2; slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });})
+ const dot4 = document.querySelector(".dot4").addEventListener('click', () => {curSlide = 3; slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });})
+
+</script>

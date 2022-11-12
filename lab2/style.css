@@ -1,3 +1,4 @@
+
 body {
     height: 100vh;
     display: grid;
@@ -51,4 +52,25 @@ body {
   .btn-next {
     top: 45%;
     right: 2%;
+  }
+
+  .dots{
+	width: fit-content;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	bottom: 5%;
+	right: 40%;
+	position: absolute;
+  }
+
+  #dot{
+	background-color: white;
+	width: 20px;
+  height: 20px;
+	margin-left: 5px;
+	margin-right: 5px;
+  border: none;
+  border-radius: 50%;
+	
   }
