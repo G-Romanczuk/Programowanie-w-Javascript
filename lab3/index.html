@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="width: 100%; display: flex">
+      <div class="box">
+        <button class="my_audio1" id="my_audio">Recording 1</button> <br />
+        <br />
+        <input type="checkbox" id="record" value="1" />
+        <label for="record">Record</label>
+        <br />
+        <input type="checkbox" id="play" value="1" />
+        <label for="play">chose to play</label>
+      </div>
+      <div class="box">
+        <button class="my_audio2" id="my_audio">Recording 2</button> <br />
+        <br />
+        <input type="checkbox" id="record" value="2" />
+        <label for="record">Record</label>
+        <br />
+        <input type="checkbox" id="play" value="1" />
+        <label for="play">chose to play</label>
+      </div>
+      <div class="box">
+        <button class="my_audio3" id="my_audio">Recording 3</button> <br />
+        <br />
+        <input type="checkbox" id="record" value="3" />
+        <label for="record">Record</label>
+        <br />
+        <input type="checkbox" id="play" value="1" />
+        <label for="play">chose to play</label>
+      </div>
+      <div class="box">
+        <button class="my_audio4" id="my_audio">Recording 4</button><br />
+        <br />
+        <input type="checkbox" id="record" value="4" />
+        <label for="record">Record</label>
+        <br />
+        <input type="checkbox" id="play" value="1" />
+        <label for="play">chose to play</label>
+      </div>
+    </div>
+    <div class="buttons">
+      <button id="recording">Play All</button>
+
+      <button id="chosenRecording">Play chosen</button>
+    </div>
+    <div class="sounds_box">
+      <div class="sounds">
+        <p class="p">Boom</p>
+        <audio src="./sounds/boom.wav" controls id="boom"></audio>
+      </div>
+      <div class="sounds">
+        <p class="p">Clap</p>
+        <audio src="./sounds/clap.wav" controls id="clap"></audio>
+      </div>
+      <div class="sounds">
+        <p class="p">hithat</p>
+        <audio src="./sounds/hihat.wav" controls id="hihat"></audio>
+      </div>
+      <div class="sounds">
+        <p class="p">kick</p>
+        <audio src="./sounds/kick.wav" controls id="kick"></audio>
+      </div>
+    </div>
+    <div class="sounds_box">
+      <div class="sounds">
+        <p class="p">openhat</p>
+        <audio src="./sounds/openhat.wav" controls id="openhat"></audio>
+      </div>
+      <div class="sounds">
+        <p class="p">ride</p>
+        <audio src="./sounds/ride.wav" controls id="ride"></audio>
+      </div>
+      <div class="sounds">
+        <p class="p">snare</p>
+        <audio src="./sounds/snare.wav" controls id="snare"></audio>
+      </div>
+      <div class="sounds">
+        <p class="p">tink</p>
+        <audio src="./sounds/tink.wav" controls id="tink"></audio>
+      </div>
+    </div>
+    <div class="sounds_box2">
+      <div class="sounds">
+        <p class="p">tom</p>
+        <audio src="./sounds/tom.wav" controls id="tom"></audio>
+      </div>
+    </div>
+
+    <script src="drumkit.js"></script>
+  </body>
+</html>
+
+<style>
+  .my_audio {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .box {
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .buttons {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    padding: 25px;
+  }
+
+  .sounds_box {
+    width: 100%;
+    display: flex;
+  }
+  .sounds_box2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
+  .sounds {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .p {
+    display: block;
+    text-align: center;
+    font-size: large;
+  }
+</style>

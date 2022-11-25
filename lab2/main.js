@@ -5,7 +5,23 @@ const slides = document.querySelectorAll(".slide");
 let curSlide = -1;
 // maximum number of slides
 let maxSlide = slides.length - 1;
-Next();
+Timer();
+
+function Timer() {
+  // check if current slide is the last and reset current slide
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+
+  //   move slide by -100%
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+
+  timeout = setTimeout(Timer, 2000);
+}
 
 // loop through slides and set each slides translateX property to index * 100%
 slides.forEach((slide, indx) => {
@@ -29,8 +45,6 @@ function Next() {
   slides.forEach((slide, indx) => {
     slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
   });
-
-  timeout = setTimeout(Next, 2000);
 }
 
 // select prev slide button
@@ -88,5 +102,5 @@ pause.addEventListener("click", function () {
 const play = document.querySelector("#play");
 
 play.addEventListener("click", function () {
-  timeout = setTimeout(Next, 2000);
+  timeout = setTimeout(Timer, 2000);
 });
