@@ -39,16 +39,16 @@ recording.addEventListener("click", () => {
 
 function saveCustomSound() {
   if (chosenToPlay1.checked) {
-    chosenSoundArray.push(soundArray1);
+    soundArray1.forEach((el, i) => { chosenSoundArray.push(soundArray1[i]);})
   }
   if (chosenToPlay2.checked) {
-    chosenSoundArray.push(soundArray2);
+    soundArray2.forEach((el, i) => { chosenSoundArray.push(soundArray2[i]);})
   }
   if (chosenToPlay3.checked) {
-    chosenSoundArray.push(soundArray3);
+    soundArray3.forEach((el, i) => { chosenSoundArray.push(soundArray3[i]);})
   }
   if (chosenToPlay4.checked) {
-    chosenSoundArray.push(soundArray4);
+    soundArray4.forEach((el, i) => { chosenSoundArray.push(soundArray4[i]);})
   }
 }
 
